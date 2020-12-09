@@ -1,6 +1,7 @@
 <?php
+namespace App\Vehicules;
 
-class Vehicule{
+abstract class Vehicule{
 
      // Propriétés de la class voiture
 
@@ -74,4 +75,6 @@ class Vehicule{
     {
         $this->immatriculation = $immatriculation;
     }
+
+    abstract public function changementVitesse();
 }
