@@ -1,3 +1,3 @@
 <?php
-// include "getData.php";
+include "getData.php";
 include "saveData.php";
