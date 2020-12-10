@@ -1,7 +1,7 @@
 <?php
+namespace App\Entity;
 
-require_once "Crud.php";
-class comment extends Crud{
+class comment{
 
     protected $class = __CLASS__;
 

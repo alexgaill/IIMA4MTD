@@ -1,6 +1,7 @@
 <?php
+namespace App\Model;
+use Core\Database\Database;
 
-require_once "Database.php";
 class Crud extends Database{
 
     protected $class;
@@ -22,8 +23,9 @@ class Crud extends Database{
         // return self::UNECONSTANTE; // self remplace le $this lorsqu'on utilise l'opérateur de résolution de portée
         // On utilise cet opérateur de résolution de portée (::) lorsqu'on appelle une méthode ou propriété static, une constante ou le cosntruct du parent. 
         $statement = "SELECT * FROM $this->class";
+        var_dump($statement);
         $query = $this->pdo->query($statement);
-        return $query->fetchAll(PDO::FETCH_OBJ);
+        return $query->fetchAll(\PDO::FETCH_OBJ);
     }
 
     /**
@@ -36,7 +38,7 @@ class Crud extends Database{
     {
         $statement = "SELECT * FROM $this->class WHERE id = $id";
         $query = $this->pdo->query($statement);
-        return $query->fetch(PDO::FETCH_OBJ);
+        return $query->fetch(\PDO::FETCH_OBJ);
     }
 
     /**

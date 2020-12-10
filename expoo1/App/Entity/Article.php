@@ -1,7 +1,7 @@
 <?php
+namespace App\Entity;
 
-require_once "Crud.php";
-class Article extends Crud{
+class Article{
 
     protected $class = __CLASS__;
 
