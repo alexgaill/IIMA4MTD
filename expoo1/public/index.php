@@ -14,6 +14,12 @@ Autoloader::register();
 // Faire les methods pour CRUD un article, une catégorie, un commentaire
 // Raccourcir au maximum le code
 
+//Vous allez à l'aide du MVC faire les pages suivantes:
+// Au clique sur une catégorie, vous arrivez sur une page qui liste les articles de la catégorie.
+// Sur l'accueil, vous affichez en plus de la liste des catégories, les 5 derniers articles (title)
+// Au clique sur un article, On arrive sur une page qui affiche l'article en question.
+// Sous cet article, vous affichez la liste des commentaires liés ainsi qu'un formulaire pour ajouter un commentaire à cet article.
+
 if (array_key_exists("page", $_GET)) {
     switch ($_GET["page"]) {
         case 'saveCategorie':
