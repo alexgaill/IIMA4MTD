@@ -11,8 +11,8 @@
 
 require "Categorie.php";
 $catClass = new Categorie();
-$categories = $catClass->getCategories();
-
+$categories = $catClass->getAll();
+var_dump($catClass->saveOne(["name" => "categorie n°20"]));
 ?>
 
 <!DOCTYPE html>

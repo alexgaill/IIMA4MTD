@@ -1,9 +1,10 @@
 <?php
 
-require_once "Database.php";
+require_once "Crud.php";
 
-class Categorie extends Database{
+class Categorie extends Crud{
     
+    protected $class = __CLASS__;
     /**
      * Undocumented variable
      *
@@ -18,22 +19,4 @@ class Categorie extends Database{
      */
     private $name;
 
-    /**
-     * return all categories
-     *
-     * @return array
-     */
-    public function getCategories():array
-    {
-        $statement = "SELECT * FROM categorie";
-        $query = $this->pdo->query($statement);
-        return $query->fetchAll(PDO::FETCH_OBJ);
-    }
-
-    public function saveCategorie(array $data)
-    {
-        $statement = "INSERT INTO categorie (name) VALUES (:name)";
-        $prepare = $this->pdo->prepare($statement);
-        $prepare->execute($data);
-    }
 }
