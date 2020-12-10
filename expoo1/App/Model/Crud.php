@@ -5,13 +5,7 @@ use Core\Database\Database;
 class Crud extends Database{
 
     protected $class;
-    const UNECONSTANTE = "Je suis une constante";
-
-    public function __construct()
-    {
-        $this->class = strtolower($this->class);
-        parent::__construct();
-    }
+    // const UNECONSTANTE = "Je suis une constante";
 
     /**
      * return all categories

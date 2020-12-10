@@ -13,7 +13,7 @@
         <?php endforeach ?>
     </ul>
 
-    <form action="saveCat.php" method="POST">
+    <form action="index.php?page=saveCategorie" method="POST">
     <label>
             Ajouter une catégorie: <input type="text" placeholder="Nom de catégorie" name="name">
     </label>
