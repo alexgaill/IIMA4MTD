@@ -1,7 +1,5 @@
 <?php
 
-use App\Controller\CategorieController;
-
 define("ROOT", dirname(__DIR__));
 require ROOT."/Core/Autoloader.php";
 Autoloader::register();
@@ -20,21 +18,6 @@ Autoloader::register();
 // Au clique sur un article, On arrive sur une page qui affiche l'article en question.
 // Sous cet article, vous affichez la liste des commentaires liés ainsi qu'un formulaire pour ajouter un commentaire à cet article.
 
-if (array_key_exists("page", $_GET)) {
-    switch ($_GET["page"]) {
-        case 'saveCategorie':
-            $controller = new CategorieController();
-            $controller->save($_POST);
-        break;
-        
-        default:
-        $controller = new CategorieController();
-        $controller->index();
-    break;
-}
-} else {
-    $controller = new CategorieController();
-    $controller->index();
-}
+include ROOT. "/routeur.php";
 ?>
 

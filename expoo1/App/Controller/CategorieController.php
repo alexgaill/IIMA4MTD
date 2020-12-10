@@ -13,6 +13,8 @@ class CategorieController extends DefaultController{
     public function index()
     {
         $categories = $this->model->getAll();
+        $cat = $this->model->getOne(1);
+        var_dump($cat);
         require ROOT."/App/View/indexView.php";
     }
 

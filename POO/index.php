@@ -2,9 +2,12 @@
 
 // require charge un fichier. Si le fichier est introuvable, require nous retourne une fatal error bloquant tout le code.
 // Include charge un fichier. Si le fichier est introuvable, include nous retourne un warning mais le code qui suit est exécuté.
-use App\Vehicules\Voiture;
-use App\Vehicules\Moto;
+
+use App\Files\File;
 use App\Users\User;
+use App\Vehicules\Moto;
+use App\Vehicules\Voiture;
+// use App\Vehicules\Vehicule;
 
 require "Autoloader.php";
 Autoloader::register(); // Appel d'une mthod statique
@@ -22,6 +25,13 @@ echo $voiture->getImmatriculation();
 echo "<br>";
 $voiture->demarrer();
 echo "<br>";
+$voiture->freiner();
+echo "<br>";
+$file = new File();
+$file->readFile();
+echo "<br>";
+
+// $vehicule = new Vehicule("SD-267-FR", "Triumph", "Bonneville", "noir"); // Erreur lors de l'instanciation d'une class abstraite car c'est interdit.
 
 $moto = new Moto("SD-267-FR", "Triumph", "Bonneville", "noir");
 var_dump($moto);

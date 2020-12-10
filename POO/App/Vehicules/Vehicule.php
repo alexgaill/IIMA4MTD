@@ -51,7 +51,7 @@ abstract class Vehicule{
         echo "La voiture démarre";
     }
 
-    public function freiner()
+    public final function freiner()
     {
         echo "La voiture ralentit";
     }
